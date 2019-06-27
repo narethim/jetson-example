@@ -151,7 +151,7 @@ scp -r /home/imnare/Desktop/k3s-0.3.0 nvidia@10.161.31.30:/home/nvidia/Desktop
 ### 5. Load docker images on each Jetson node
 
 ```sh
-cd ~/Desktop/k3s-0.3.0/'docker image'
+cd ~/Desktop/k3s-0.3.0/'docker images'
 
 docker load -i traefik.tar
 docker load -i coredns-coredns.tar
