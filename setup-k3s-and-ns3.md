@@ -4,9 +4,9 @@ Setup up RHEL 7.6 with interface alias and Ubuntu 16.04 VM for network testing.
 
 ## Pre-requisite
 
-* A physical RHEL 7.6
-* Virtualbox installed on RHEL 7.6
-* The Jetson board's ethernet cable is connected to the switch where the RHEL 7 is connected to.
+* A physical `RHEL 7.6` system
+* Virtualbox installed on `RHEL 7.6` system
+* The Jetson board's ethernet cable is connected to the switch where the `RHEL 7.6` system is connected to.
 
 ## Create an ubuntu 16.04 VM with 4 bridged network dapters
 
@@ -17,7 +17,7 @@ Record MAC Addresses:
 * [ ] Adapter 3 MAC address:
 * [ ] Adapter 4 MAC address:
 
-## Clone repository files ( RHEL 6.4 )
+## Clone repository files ( RHEL 7.6 )
 
 Clone repository ino Desktop
 
@@ -27,7 +27,7 @@ cd ~/Desktop
 git clone https://imnare@emsbitbucket.ga.com/scm/~phamro/acc-setup.git
 ```
 
-## Create network aliases ( RHEL 6.4 )
+## Create network aliases ( RHEL 7.6 )
 
 Create network aliases:
 
@@ -37,7 +37,7 @@ cd /etc/sysconfig/network-scripts
 sudo vim ifcfg-em1:1
 ```
 
-Add the following content: 
+Add the following content:
 
 ```sh
 NAME="em1:1"
@@ -178,3 +178,9 @@ ping -c5 10.161.29.30
 # ping jet-nano
 ping -c5 10.161.30.30
 ```
+
+|            | jet-b   | jet-nano | jet-j |
+|------------|---------|----------|-------|
+| jet-b      |    yes  |          |       |
+| jet-nano   |         |     yes  |       |
+| jet-j      |         |          |   yes |
