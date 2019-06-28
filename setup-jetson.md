@@ -95,7 +95,7 @@ Add the following content:
 #### 3.1 jet-b (10.161.29.30)
 
 ```sh
-nameserver 10.161.28.203
+nameserver 10.161.6.247
 
 nameserver 10.161.29.10
 nameserver 10.161.29.20
@@ -104,7 +104,7 @@ nameserver 10.161.29.20
 #### 3.2 jet-nano (10.161.30.30)
 
 ```sh
-nameserver 10.161.28.203
+nameserver 10.161.6.247
 
 nameserver 10.161.30.10
 nameserver 10.161.30.20
@@ -113,7 +113,7 @@ nameserver 10.161.30.20
 #### 3.3 jet-j (10.161.31.30)
 
 ```sh
-nameserver 10.161.28.203
+nameserver 10.161.6.247
 
 nameserver 10.161.31.10
 nameserver 10.161.31.20
