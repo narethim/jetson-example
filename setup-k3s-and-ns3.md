@@ -31,7 +31,7 @@ git clone https://imnare@emsbitbucket.ga.com/scm/~phamro/acc-setup.git
 
 Create network interface aliases `em1:1`, `em1:2`, and `em1:3`.
 
-### Create network interface alias `em:1`
+### Create network interface alias `em1:1`
 
 ```sh
 cd /etc/sysconfig/network-scripts
@@ -61,13 +61,13 @@ IPV6_FAILURE_FATAL="no"
 ZONE=
 ```
 
-Start the networkinterface alias up
+Start the network interface alias up
 
 ```sh
 sudo ifup em1:1
 ```
 
-### Create network interface alias `em:2`
+### Create network interface alias `em1:2`
 
 ```sh
 cd /etc/sysconfig/network-scripts
@@ -97,13 +97,13 @@ IPV6_FAILURE_FATAL="no"
 ZONE=
 ```
 
-Start the networkinterface alias up
+Start the network interface alias up
 
 ```sh
 sudo ifup em1:2
 ```
 
-### Create network interface alias `em:3`
+### Create network interface alias `em1:3`
 
 ```sh
 cd /etc/sysconfig/network-scripts
@@ -133,7 +133,7 @@ IPV6_FAILURE_FATAL="no"
 ZONE=
 ```
 
-Start the networkinterface alias up
+Start the network interface alias up
 
 ```sh
 sudo ifup em1:3
