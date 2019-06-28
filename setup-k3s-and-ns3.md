@@ -27,13 +27,14 @@ cd ~/Desktop
 git clone https://imnare@emsbitbucket.ga.com/scm/~phamro/acc-setup.git
 ```
 
-## Create network aliases ( RHEL 7.6 )
+## Create network interface aliases ( RHEL 7.6 )
 
-Create network aliases:
+Create network interface aliases `em1:1`, `em1:2`, and `em1:3`.
+
+### Create network interface alias `em:1`
 
 ```sh
 cd /etc/sysconfig/network-scripts
-
 sudo vim ifcfg-em1:1
 ```
 
@@ -42,12 +43,100 @@ Add the following content:
 ```sh
 NAME="em1:1"
 DEVICE="em1:1"
+ONBOOT="yes"
+NETBOOT="yes"
+IPV6INIT="no"
+BOOTPROTO=none
+IPADDR="10.161.29.10"
+NETMASK="255.255.255.0"
+#GATEWAY="10.161.29.20"
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+ZONE=
 ```
 
 Start the networkinterface alias up
 
 ```sh
 sudo ifup em1:1
+```
+
+### Create network interface alias `em:2`
+
+```sh
+cd /etc/sysconfig/network-scripts
+sudo vim ifcfg-em1:2
+```
+
+Add the following content:
+
+```sh
+NAME="em1:2"
+DEVICE="em1:2"
+ONBOOT="yes"
+NETBOOT="yes"
+IPV6INIT="no"
+BOOTPROTO=none
+IPADDR="10.161.30.10"
+NETMASK="255.255.255.0"
+#GATEWAY="10.161.30.20"
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+ZONE=
+```
+
+Start the networkinterface alias up
+
+```sh
+sudo ifup em1:2
+```
+
+### Create network interface alias `em:3`
+
+```sh
+cd /etc/sysconfig/network-scripts
+sudo vim ifcfg-em1:3
+```
+
+Add the following content:
+
+```sh
+NAME="em1:3"
+DEVICE="em1:3"
+ONBOOT="yes"
+NETBOOT="yes"
+IPV6INIT="no"
+BOOTPROTO=none
+IPADDR="10.161.31.10"
+NETMASK="255.255.255.0"
+#GATEWAY="10.161.31.20"
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+ZONE=
+```
+
+Start the networkinterface alias up
+
+```sh
+sudo ifup em1:3
 ```
 
 ## Create network interfaces and ssign static ip addresses ( Ubuntu 16.04 VM )
@@ -59,7 +148,7 @@ sudo ifup em1:1
 | enp0s9     | 10.161.30.20 |
 | enp0s10    | 10.161.31.20 |
 
-Modify `/etc/network/interfaces` to make static ip addresse.
+Modify `/etc/network/interfaces` to make static ip addresses.
 
 ```sh
 sudo vim /etc/network/interfaces
