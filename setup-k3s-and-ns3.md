@@ -19,7 +19,7 @@ Record MAC Addresses:
 
 ## Clone repository files ( RHEL 7.6 )
 
-Clone repository ino Desktop
+Clone repository into Desktop
 
 ```sh
 cd ~/Desktop
