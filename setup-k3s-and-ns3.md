@@ -216,19 +216,41 @@ Turn `on` ip forwarding.
 sudo sysctl -w net.ipv4.ip_forward=1
 ```
 
-Turn `off` ip forwarding.
-
-```sh
-sudo sysctl -w net.ipv4.ip_forward=0
-```
-
 Check status of ip forwarding.
 
 ```sh
 sudo cat /proc/sys/net/ipv4/ip_forward
 ```
 
+At this time connectivities between nodes is as follow:
+
+|            | jet-b   | jet-nano | jet-j |
+|------------|---------|----------|-------|
+| jet-b      |   yes   |    yes   |   yes |
+| jet-nano   |   yes   |    yes   |   yes |
+| jet-j      |   yes   |    yes   |   yes |
+
 ## Build and run NS-3 script ( Ubuntu 16.04 VM )
+
+### Turn off ip_forwarding
+
+Turn `off` ip forwarding.
+
+```sh
+sudo sysctl -w net.ipv4.ip_forward=0
+```
+
+At this time connectivities between nodes is as follow:
+
+|            | jet-b   | jet-nano | jet-j |
+|------------|---------|----------|-------|
+| jet-b      |   yes   |    no    |   no  |
+| jet-nano   |   no    |    yes   |   no  |
+| jet-j      |   no    |    no    |   yes |
+
+### Run the NS-3 application
+
+Run the application: `"scratch/three-node-cluster"`
 
 ```sh
 cd ~/projects/ns3/tarballs/ns-allinone-3.29/ns-3.19
