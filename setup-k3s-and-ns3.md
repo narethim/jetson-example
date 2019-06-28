@@ -12,10 +12,10 @@ Setup up RHEL 7.6 with interface alias and Ubuntu 16.04 VM for network testing.
 
 Record MAC Addresses:
 
-* [ ] Adapter 1 MAC address:
-* [ ] Adapter 2 MAC address:
-* [ ] Adapter 3 MAC address:
-* [ ] Adapter 4 MAC address:
+* [ ] Adapter 1 MAC address: 08 00 27 20 e8 37
+* [ ] Adapter 2 MAC address: 08 00 27 b3 a5 82
+* [ ] Adapter 3 MAC address: 08 00 27 7f d9 0c
+* [ ] Adapter 4 MAC address: 08 00 27 dc 60 80
 
 ## Clone repository files ( RHEL 7.6 )
 
