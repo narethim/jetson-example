@@ -188,11 +188,32 @@ sudo cat /var/lib/rancher/k3s/server/node-token
 Start k3s worker node
 
 ```sh
-sudo k3s agent --docker --resolv-conf /etc/resolv.conf --server https://<server_ip_addrsss>:6443 --token <server_node_token>
+sudo k3s agent --docker --resolv-conf /etc/resolv.conf --server https://<server_ip_addrsss>:6443 \
+  --token <server_node_token>
 ```
 
 Example:
 
 ```sh
-sudo k3s agent --docker --resolv-conf /etc/resolv.conf --server https://10.161.30.30:6443 --token <server_node_token>
+sudo k3s agent --docker --resolv-conf /etc/resolv.conf --server https://10.161.30.30:6443 \
+  --token <server_node_token>
+```
+
+### 8. Label k3s master and worker nodes
+
+On master node `nano-a` issue the following command:
+
+```sh
+# Label `nano-a` as master
+kubectl label node nano-a kubernetes.io/role=master
+kubectl label node nano-a node-role.kubernetes.io/master=""
+
+# Label `jet-b` as node
+kubectl label node jet-b kubernetes.io/role=node
+kubectl label node jet-b node-role.kubernetes.io/node=""
+
+# Label `jet-b` as node
+kubectl label node jet-j kubernetes.io/role=node
+kubectl label node jet-j node-role.kubernetes.io/node=""
+
 ```
