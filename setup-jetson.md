@@ -156,7 +156,7 @@ cd ~/Desktop/k3s-0.3.0/'docker images'
 docker load -i traefik.tar
 docker load -i coredns-coredns.tar
 docker load -i k8s-gcr-io-pause.tar
-docker load -i rancher-klipper-help.tar
+docker load -i rancher-klipper-helm.tar
 docker load -i rancher-klipper-lb.tar
 ```
 
@@ -169,7 +169,7 @@ sudo chmod +x /usr/local/bin/k3s
 
 ### 7. Install k3s master and worker node
 
-#### 7.1 Install k3s master node
+#### 7.1 Install k3s server on master node
 
 Start k3s master node
 
@@ -183,7 +183,7 @@ Print out node-token
 sudo cat /var/lib/rancher/k3s/server/node-token
 ```
 
-#### 7.1 Install k3s-server master node
+#### 7.1 Install k3s agent on worker node
 
 Start k3s worker node
 

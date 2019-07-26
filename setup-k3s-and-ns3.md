@@ -139,7 +139,7 @@ Start the network interface alias up
 sudo ifup em1:3
 ```
 
-## Create network interfaces and ssign static ip addresses ( Ubuntu 16.04 VM )
+## Create network interfaces and assign static ip addresses ( Ubuntu 16.04 VM )
 
 | Interfaces | Ip address   |
 |------------|--------------|
@@ -168,12 +168,12 @@ auto enp0s8
     netmask 255.255.255.0
 
 auto enp0s9
-    iface enp0s8 inet static
+    iface enp0s9 inet static
     address 10.161.30.20
     netmask 255.255.255.0
 
 auto enp0s10
-    iface enp0s8 inet static
+    iface enp0s10 inet static
     address 10.161.31.20
     netmask 255.255.255.0
 
